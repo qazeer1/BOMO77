@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>HealthyHotMeal — Log meals, track heart-rate & improve</title>
+  <meta name="description" content="Personalized meal tracking, heart-rate sync, daily micro-habits. Start free."/>
+  <meta name="theme-color" content="#0ea5a4"/>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    /* Minimal custom CSS */
+    html, body { height: 100%; }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+  <!-- Header -->
+  <header class="border-b sticky top-0 bg-white z-10">
+    <div class="mx-auto max-w-5xl px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-lg flex items-center justify-center text-white font-bold">HH</div>
+        <div>
+          <a class="font-semibold text-lg">HealthyHotMeal</a>
+          <div class="text-xs text-gray-500">Meals • Heart-rate • Lifestyle</div>
+        </div>
+      </div>
+      <nav class="flex items-center gap-4 text-sm">
+        <a href="#how" class="hover:text-teal-500 transition-colors">How</a>
+        <a href="#features" class="hover:text-teal-500 transition-colors">Features</a>
+        <a href="#pricing" class="hover:text-teal-500 transition-colors">Pricing</a>
+        <a href="#signup" class="bg-teal-500 hover:bg-teal-600 text-white px-3 py-2 rounded transition-colors">Start free</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="mx-auto max-w-5xl px-6 py-12">
+    <!-- Hero -->
+    <section class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl font-extrabold mb-4">Log meals • Track heart-rate • Build better habits</h1>
+        <p class="text-gray-600 mb-6">Personalized daily plans, micro-habits, and simple analytics to help you improve in 30 days.</p>
+        <div class="flex gap-3">
+          <a href="#signup" class="bg-teal-500 hover:bg-teal-600 text-white px-5 py-3 rounded transition-colors">Start free</a>
+          <a href="#features" class="border border-gray-300 hover:border-gray-400 px-5 py-3 rounded transition-colors">Learn more</a>
+        </div>
+        <div class="mt-4 text-sm text-gray-500">Join 12,000+ users • Rated 4.7/5</div>
+      </div>
+      <div>
+        <div class="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-lg shadow max-w-md w-full h-64 flex items-center justify-center">
+          <div class="text-center">
+            <div class="text-teal-500 font-bold text-lg">App Screenshot</div>
+            <div class="text-gray-500 text-sm mt-2">Replace with hero-screenshot.png</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">How it works</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-4 bg-gray-50 rounded">
+          <h3 class="font-semibold">1. Log</h3>
+          <p class="text-sm text-gray-600">Quick meal logging: manual, barcode demo, or camera quick-add.</p>
+        </div>
+        <div class="p-4 bg-gray-50 rounded">
+          <h3 class="font-semibold">2. Analyse</h3>
+          <p class="text-sm text-gray-600">Calories, macros, resting heart-rate & trends.</p>
+        </div>
+        <div class="p-4 bg-gray-50 rounded">
+          <h3 class="font-semibold">3. Improve</h3>
+          <p class="text-sm text-gray-600">AI suggestions, daily micro-habits, streaks & badges.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="mt-10 grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-bold mb-3">Core features</h3>
+        <ul class="list-disc pl-5 text-sm text-gray-700 space-y-2">
+          <li>Meal logging — manual & barcode demo</li>
+          <li>Heart-rate ingestion — BLE demo + manual fallback</li>
+          <li>Daily check-in, streaks, badges</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-bold mb-3">Integrations & Privacy</h3>
+        <ul class="list-disc pl-5 text-sm text-gray-700 space-y-2">
+          <li>Google Fit & Apple Health adapters (server-side)</li>
+          <li>Plausible-like analytics + opt-out</li>
+          <li>Stripe for subscriptions (server expected)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="mt-12">
+      <h2 class="text-2xl font-bold mb-6">Pricing</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 border rounded">
+          <h4 class="font-semibold">Free</h4>
+          <p class="text-sm text-gray-600">Basic tracking, manual HR, daily check-in, ads</p>
+        </div>
+        <div class="p-6 border-2 rounded border-teal-200 bg-teal-50">
+          <h4 class="font-semibold">Premium</h4>
+          <p class="text-sm text-gray-600">No ads, export, advanced analytics — $4.99/mo</p>
+        </div>
+        <div class="p-6 border rounded">
+          <h4 class="font-semibold">Teams</h4>
+          <p class="text-sm text-gray-600">Contact for clinic/coach plans</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signup -->
+    <section id="signup" class="mt-12 bg-white p-6 rounded shadow">
+      <h3 class="font-bold">Get early access</h3>
+      <!-- For Netlify Forms: add data-netlify="true" and a name attribute -->
+      <form id="signup-form" class="mt-4 grid md:grid-cols-3 gap-3">
+        <input name="email" type="email" placeholder="Your email" required class="p-3 border rounded col-span-2" />
+        <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-white px-4 py-3 rounded transition-colors">Get access</button>
+      </form>
+    </section>
+
+    <!-- Ad placeholder -->
+    <section class="mt-8 p-4 text-center">
+      <div class="mx-auto max-w-xl border border-dashed border-gray-200 py-8 rounded">
+        <div class="text-sm text-gray-500">Ad placeholder — replace with AdSense snippet for Free users.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t mt-12">
+    <div class="mx-auto max-w-5xl px-6 py-6 flex justify-between items-center text-sm text-gray-500">
+      <div>© <span id="year"></span> HealthyHotMeal</div>
+      <div><a href="#" class="hover:text-teal-500 transition-colors">Privacy</a> • <a href="#" class="hover:text-teal-500 transition-colors">Terms</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // main.js functionality
+    document.getElementById('year').innerText = new Date().getFullYear();
+    
+    // Form submission handler
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[name="email"]').value;
+      alert(`Thank you! We'll contact you at ${email} when we launch.`);
+      this.reset();
+    });
+    
+    // Simple event logger for analytics placeholder
+    window.hhEvent = function(event, label){
+      console.log('hhEvent', event, label);
+      // TODO: send to Plausible or your analytics endpoint
+    };
+    
+    // daily check-in (very light)
+    (function(){
+      const key = 'hhm_last_checkin';
+      const last = localStorage.getItem(key);
+      const days = last ? Math.floor((Date.now() - Number(last)) / (1000*60*60*24)) : Infinity;
+      if(days >= 1){
+        // optionally show modal or prompt — for static demo we do nothing
+        console.log('Daily check-in available');
+      }
+    })();
+    
+    // Simple RTL toggle for Arabic/English
+    const switcher = document.createElement('button');
+    switcher.innerText = 'العربية';
+    switcher.className = 'fixed bottom-4 left-4 bg-white border px-3 py-2 rounded shadow z-20';
+    document.body.appendChild(switcher);
+    let lang = 'en';
+    switcher.addEventListener('click', () => {
+      lang = lang === 'en' ? 'ar' : 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      switcher.innerText = lang === 'ar' ? 'English' : 'العربية';
+    });
+  </script>
+</body>
+</html>
